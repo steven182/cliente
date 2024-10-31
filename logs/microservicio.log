@@ -1,0 +1,470 @@
+2024-10-31T10:53:45.891-05:00  INFO 14732 --- [cliente] [main] c.p.cliente.ClienteApplicationTests      : Starting ClienteApplicationTests using Java 17.0.10 with PID 14732 (started by Steven Romero in C:\Users\Steven Romero\Documents\workspace-spring-tool-suite-4-4.5.1.RELEASE\cliente)
+2024-10-31T10:53:45.894-05:00 DEBUG 14732 --- [cliente] [main] c.p.cliente.ClienteApplicationTests      : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-31T10:53:45.896-05:00  INFO 14732 --- [cliente] [main] c.p.cliente.ClienteApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2024-10-31T10:53:47.583-05:00  INFO 14732 --- [cliente] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-31T10:53:47.721-05:00  INFO 14732 --- [cliente] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122 ms. Found 2 JPA repository interfaces.
+2024-10-31T10:53:48.643-05:00  INFO 14732 --- [cliente] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-31T10:53:49.174-05:00  INFO 14732 --- [cliente] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@77b3752b
+2024-10-31T10:53:49.179-05:00  INFO 14732 --- [cliente] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-31T10:53:49.418-05:00  INFO 14732 --- [cliente] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-31T10:53:49.620-05:00  INFO 14732 --- [cliente] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-31T10:53:49.747-05:00  INFO 14732 --- [cliente] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-31T10:53:50.565-05:00  INFO 14732 --- [cliente] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-31T10:53:52.467-05:00  INFO 14732 --- [cliente] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-31T10:53:52.473-05:00  INFO 14732 --- [cliente] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-31T10:53:53.366-05:00  WARN 14732 --- [cliente] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-31T10:53:54.779-05:00 DEBUG 14732 --- [cliente] [main] .a.r.l.a.MessagingMessageListenerAdapter : Inferred argument type for public void com.prueba.cliente.service.impl.MovimientoEventListener.recibirMovimientoRegistradoEvento(org.springframework.messaging.Message) is class com.prueba.cliente.config.MovimientoRegistradoEvent
+2024-10-31T10:53:54.808-05:00 DEBUG 14732 --- [cliente] [main] o.s.a.r.l.SimpleMessageListenerContainer : No global properties bean
+2024-10-31T10:53:54.816-05:00 DEBUG 14732 --- [cliente] [main] o.s.a.r.l.SimpleMessageListenerContainer : Starting Rabbit listener container.
+2024-10-31T10:53:54.824-05:00  INFO 14732 --- [cliente] [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-10-31T10:53:54.965-05:00  INFO 14732 --- [cliente] [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#609edb55:0/SimpleConnection@1e6f7c25 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55287]
+2024-10-31T10:53:54.972-05:00 DEBUG 14732 --- [cliente] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Initializing declarations
+2024-10-31T10:53:54.977-05:00 DEBUG 14732 --- [cliente] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Nothing to declare
+2024-10-31T10:53:55.015-05:00 DEBUG 14732 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Starting consumer Consumer@2b30b25f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-10-31T10:53:55.039-05:00 DEBUG 14732 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-10-31T10:53:55.080-05:00 DEBUG 14732 --- [cliente] [pool-3-thread-3] o.s.a.r.listener.BlockingQueueConsumer   : ConsumeOK: Consumer@2b30b25f: tags=[[amq.ctag-TdPLZPkzHJlrFoMqUQ4yLA]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2ae0eb98 Shared Rabbit Connection: SimpleConnection@1e6f7c25 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55287], acknowledgeMode=AUTO local queue size=0
+2024-10-31T10:53:55.080-05:00 DEBUG 14732 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Started on queue 'movimientoQueue' with tag amq.ctag-TdPLZPkzHJlrFoMqUQ4yLA: Consumer@2b30b25f: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2ae0eb98 Shared Rabbit Connection: SimpleConnection@1e6f7c25 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55287], acknowledgeMode=AUTO local queue size=0
+2024-10-31T10:53:55.095-05:00  INFO 14732 --- [cliente] [main] c.p.cliente.ClienteApplicationTests      : Started ClienteApplicationTests in 9.793 seconds (process running for 11.885)
+2024-10-31T10:53:56.016-05:00  INFO 14732 --- [cliente] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.prueba.cliente.controller.TestClienteController]: TestClienteController does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-10-31T10:53:56.103-05:00  INFO 14732 --- [cliente] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.prueba.cliente.ClienteApplication for test class com.prueba.cliente.controller.TestClienteController
+2024-10-31T10:53:56.117-05:00  INFO 14732 --- [cliente] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-10-31T10:53:56.205-05:00  INFO 14732 --- [cliente] [main] c.p.c.controller.TestClienteController   : Starting TestClienteController using Java 17.0.10 with PID 14732 (started by Steven Romero in C:\Users\Steven Romero\Documents\workspace-spring-tool-suite-4-4.5.1.RELEASE\cliente)
+2024-10-31T10:53:56.206-05:00 DEBUG 14732 --- [cliente] [main] c.p.c.controller.TestClienteController   : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-31T10:53:56.208-05:00  INFO 14732 --- [cliente] [main] c.p.c.controller.TestClienteController   : The following 1 profile is active: "test"
+2024-10-31T10:53:56.794-05:00  INFO 14732 --- [cliente] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-31T10:53:56.850-05:00  INFO 14732 --- [cliente] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+2024-10-31T10:53:56.963-05:00  INFO 14732 --- [cliente] [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-10-31T10:53:57.087-05:00  INFO 14732 --- [cliente] [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:b60710de-1994-45a0-93f5-654be39bb8bf;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-10-31T10:53:57.723-05:00  INFO 14732 --- [cliente] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-31T10:53:57.730-05:00  INFO 14732 --- [cliente] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-31T10:53:57.758-05:00  INFO 14732 --- [cliente] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-31T10:53:57.948-05:00  INFO 14732 --- [cliente] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-31T10:53:58.030-05:00  INFO 14732 --- [cliente] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-31T10:53:58.251-05:00  WARN 14732 --- [cliente] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-31T10:53:58.588-05:00  INFO 14732 --- [cliente] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:b60710de-1994-45a0-93f5-654be39bb8bf'
+2024-10-31T10:53:58.682-05:00  INFO 14732 --- [cliente] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-10-31T10:53:58.683-05:00  INFO 14732 --- [cliente] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-10-31T10:53:58.686-05:00  INFO 14732 --- [cliente] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-10-31T10:53:58.702-05:00 DEBUG 14732 --- [cliente] [main] .a.r.l.a.MessagingMessageListenerAdapter : Inferred argument type for public void com.prueba.cliente.service.impl.MovimientoEventListener.recibirMovimientoRegistradoEvento(org.springframework.messaging.Message) is class com.prueba.cliente.config.MovimientoRegistradoEvent
+2024-10-31T10:53:58.703-05:00 DEBUG 14732 --- [cliente] [main] o.s.a.r.l.SimpleMessageListenerContainer : No global properties bean
+2024-10-31T10:53:58.705-05:00 DEBUG 14732 --- [cliente] [main] o.s.a.r.l.SimpleMessageListenerContainer : Starting Rabbit listener container.
+2024-10-31T10:53:58.707-05:00  INFO 14732 --- [cliente] [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-10-31T10:53:58.724-05:00  INFO 14732 --- [cliente] [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#237e4ed9:0/SimpleConnection@22071f0 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55288]
+2024-10-31T10:53:58.725-05:00 DEBUG 14732 --- [cliente] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Initializing declarations
+2024-10-31T10:53:58.728-05:00 DEBUG 14732 --- [cliente] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Nothing to declare
+2024-10-31T10:53:58.732-05:00 DEBUG 14732 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Starting consumer Consumer@35825d43: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-10-31T10:53:58.735-05:00 DEBUG 14732 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-10-31T10:53:58.745-05:00 DEBUG 14732 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Started on queue 'movimientoQueue' with tag amq.ctag-IYxlLc3JcHXJtn3xV4GH0A: Consumer@35825d43: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2fedf25b Shared Rabbit Connection: SimpleConnection@22071f0 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55288], acknowledgeMode=AUTO local queue size=0
+2024-10-31T10:53:58.745-05:00 DEBUG 14732 --- [cliente] [pool-5-thread-3] o.s.a.r.listener.BlockingQueueConsumer   : ConsumeOK: Consumer@35825d43: tags=[[amq.ctag-IYxlLc3JcHXJtn3xV4GH0A]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2fedf25b Shared Rabbit Connection: SimpleConnection@22071f0 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55288], acknowledgeMode=AUTO local queue size=0
+2024-10-31T10:53:58.753-05:00  INFO 14732 --- [cliente] [main] c.p.c.controller.TestClienteController   : Started TestClienteController in 2.636 seconds (process running for 15.543)
+2024-10-31T10:54:00.277-05:00 DEBUG 14732 --- [cliente] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutting down Rabbit listener container
+2024-10-31T10:54:00.288-05:00 DEBUG 14732 --- [cliente] [pool-3-thread-4] o.s.a.r.listener.BlockingQueueConsumer   : Received cancelOk for tag amq.ctag-TdPLZPkzHJlrFoMqUQ4yLA (movimientoQueue); Consumer@2b30b25f: tags=[[amq.ctag-TdPLZPkzHJlrFoMqUQ4yLA]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2ae0eb98 Shared Rabbit Connection: SimpleConnection@1e6f7c25 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55287], acknowledgeMode=AUTO local queue size=0
+2024-10-31T10:54:00.289-05:00  INFO 14732 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2024-10-31T10:54:01.144-05:00  INFO 14732 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2024-10-31T10:54:01.145-05:00 DEBUG 14732 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Cancelling Consumer@2b30b25f: tags=[[amq.ctag-TdPLZPkzHJlrFoMqUQ4yLA]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2ae0eb98 Shared Rabbit Connection: SimpleConnection@1e6f7c25 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55287], acknowledgeMode=AUTO local queue size=0
+2024-10-31T10:54:01.146-05:00 DEBUG 14732 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Closing Rabbit Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2ae0eb98 Shared Rabbit Connection: SimpleConnection@1e6f7c25 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55287]
+2024-10-31T10:54:01.147-05:00 DEBUG 14732 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Closing cached Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-10-31T10:54:01.162-05:00 DEBUG 14732 --- [cliente] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2024-10-31T10:54:01.166-05:00  INFO 14732 --- [cliente] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-31T10:54:01.171-05:00  INFO 14732 --- [cliente] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-31T10:54:01.180-05:00  INFO 14732 --- [cliente] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-31T10:54:01.187-05:00 DEBUG 14732 --- [cliente] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutting down Rabbit listener container
+2024-10-31T10:54:01.203-05:00 DEBUG 14732 --- [cliente] [pool-5-thread-4] o.s.a.r.listener.BlockingQueueConsumer   : Received cancelOk for tag amq.ctag-IYxlLc3JcHXJtn3xV4GH0A (movimientoQueue); Consumer@35825d43: tags=[[amq.ctag-IYxlLc3JcHXJtn3xV4GH0A]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2fedf25b Shared Rabbit Connection: SimpleConnection@22071f0 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55288], acknowledgeMode=AUTO local queue size=0
+2024-10-31T10:54:01.203-05:00  INFO 14732 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2024-10-31T10:54:01.774-05:00  INFO 14732 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2024-10-31T10:54:01.774-05:00 DEBUG 14732 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Cancelling Consumer@35825d43: tags=[[amq.ctag-IYxlLc3JcHXJtn3xV4GH0A]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2fedf25b Shared Rabbit Connection: SimpleConnection@22071f0 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55288], acknowledgeMode=AUTO local queue size=0
+2024-10-31T10:54:01.775-05:00 DEBUG 14732 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Closing Rabbit Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2fedf25b Shared Rabbit Connection: SimpleConnection@22071f0 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55288]
+2024-10-31T10:54:01.775-05:00 DEBUG 14732 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Closing cached Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-10-31T10:54:01.780-05:00 DEBUG 14732 --- [cliente] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2024-10-31T10:54:01.783-05:00  INFO 14732 --- [cliente] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-31T10:59:39.420-05:00  INFO 18996 --- [cliente] [main] c.p.c.controller.TestClienteController   : Starting TestClienteController using Java 17.0.10 with PID 18996 (started by Steven Romero in C:\Users\Steven Romero\Documents\workspace-spring-tool-suite-4-4.5.1.RELEASE\cliente)
+2024-10-31T10:59:39.422-05:00 DEBUG 18996 --- [cliente] [main] c.p.c.controller.TestClienteController   : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-31T10:59:39.424-05:00  INFO 18996 --- [cliente] [main] c.p.c.controller.TestClienteController   : The following 1 profile is active: "test"
+2024-10-31T10:59:40.902-05:00  INFO 18996 --- [cliente] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-31T10:59:41.049-05:00  INFO 18996 --- [cliente] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 2 JPA repository interfaces.
+2024-10-31T10:59:41.297-05:00  INFO 18996 --- [cliente] [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-10-31T10:59:41.909-05:00  INFO 18996 --- [cliente] [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:6acf24c8-1d3a-4086-8c76-f8fb2ee8a9aa;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-10-31T10:59:42.573-05:00  INFO 18996 --- [cliente] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-31T10:59:42.716-05:00  INFO 18996 --- [cliente] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-31T10:59:42.796-05:00  INFO 18996 --- [cliente] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-31T10:59:43.481-05:00  INFO 18996 --- [cliente] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-31T10:59:45.082-05:00  INFO 18996 --- [cliente] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-31T10:59:45.141-05:00  INFO 18996 --- [cliente] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-31T10:59:45.995-05:00  WARN 18996 --- [cliente] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-31T10:59:47.288-05:00  INFO 18996 --- [cliente] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:6acf24c8-1d3a-4086-8c76-f8fb2ee8a9aa'
+2024-10-31T10:59:47.415-05:00  INFO 18996 --- [cliente] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-10-31T10:59:47.416-05:00  INFO 18996 --- [cliente] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-10-31T10:59:47.419-05:00  INFO 18996 --- [cliente] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2024-10-31T10:59:47.483-05:00 DEBUG 18996 --- [cliente] [main] .a.r.l.a.MessagingMessageListenerAdapter : Inferred argument type for public void com.prueba.cliente.service.impl.MovimientoEventListener.recibirMovimientoRegistradoEvento(org.springframework.messaging.Message) is class com.prueba.cliente.config.MovimientoRegistradoEvent
+2024-10-31T10:59:47.514-05:00 DEBUG 18996 --- [cliente] [main] o.s.a.r.l.SimpleMessageListenerContainer : No global properties bean
+2024-10-31T10:59:47.521-05:00 DEBUG 18996 --- [cliente] [main] o.s.a.r.l.SimpleMessageListenerContainer : Starting Rabbit listener container.
+2024-10-31T10:59:47.527-05:00  INFO 18996 --- [cliente] [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-10-31T10:59:47.652-05:00  INFO 18996 --- [cliente] [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#755a4ef5:0/SimpleConnection@37289e90 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55304]
+2024-10-31T10:59:47.662-05:00 DEBUG 18996 --- [cliente] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Initializing declarations
+2024-10-31T10:59:47.666-05:00 DEBUG 18996 --- [cliente] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Nothing to declare
+2024-10-31T10:59:47.692-05:00 DEBUG 18996 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Starting consumer Consumer@1d6ed085: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-10-31T10:59:47.713-05:00 DEBUG 18996 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-10-31T10:59:47.748-05:00 DEBUG 18996 --- [cliente] [pool-2-thread-3] o.s.a.r.listener.BlockingQueueConsumer   : ConsumeOK: Consumer@1d6ed085: tags=[[amq.ctag-z2gzaE0b-StToz6NVPiUuA]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4fc1eee5 Shared Rabbit Connection: SimpleConnection@37289e90 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55304], acknowledgeMode=AUTO local queue size=0
+2024-10-31T10:59:47.748-05:00 DEBUG 18996 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Started on queue 'movimientoQueue' with tag amq.ctag-z2gzaE0b-StToz6NVPiUuA: Consumer@1d6ed085: tags=[[amq.ctag-z2gzaE0b-StToz6NVPiUuA]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4fc1eee5 Shared Rabbit Connection: SimpleConnection@37289e90 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55304], acknowledgeMode=AUTO local queue size=0
+2024-10-31T10:59:47.782-05:00  INFO 18996 --- [cliente] [main] c.p.c.controller.TestClienteController   : Started TestClienteController in 9.074 seconds (process running for 11.396)
+2024-10-31T10:59:49.026-05:00 DEBUG 18996 --- [cliente] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutting down Rabbit listener container
+2024-10-31T10:59:49.034-05:00 DEBUG 18996 --- [cliente] [pool-2-thread-4] o.s.a.r.listener.BlockingQueueConsumer   : Received cancelOk for tag amq.ctag-z2gzaE0b-StToz6NVPiUuA (movimientoQueue); Consumer@1d6ed085: tags=[[amq.ctag-z2gzaE0b-StToz6NVPiUuA]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4fc1eee5 Shared Rabbit Connection: SimpleConnection@37289e90 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55304], acknowledgeMode=AUTO local queue size=0
+2024-10-31T10:59:49.035-05:00  INFO 18996 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2024-10-31T10:59:49.771-05:00  INFO 18996 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2024-10-31T10:59:49.772-05:00 DEBUG 18996 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Cancelling Consumer@1d6ed085: tags=[[amq.ctag-z2gzaE0b-StToz6NVPiUuA]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4fc1eee5 Shared Rabbit Connection: SimpleConnection@37289e90 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55304], acknowledgeMode=AUTO local queue size=0
+2024-10-31T10:59:49.773-05:00 DEBUG 18996 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Closing Rabbit Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4fc1eee5 Shared Rabbit Connection: SimpleConnection@37289e90 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55304]
+2024-10-31T10:59:49.773-05:00 DEBUG 18996 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Closing cached Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-10-31T10:59:49.784-05:00 DEBUG 18996 --- [cliente] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2024-10-31T10:59:49.787-05:00  INFO 18996 --- [cliente] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-31T11:08:10.167-05:00  INFO 18704 --- [cliente] [restartedMain] com.prueba.cliente.ClienteApplication    : Starting ClienteApplication using Java 17.0.10 with PID 18704 (C:\Users\Steven Romero\Documents\workspace-spring-tool-suite-4-4.5.1.RELEASE\cliente\target\classes started by Steven Romero in C:\Users\Steven Romero\Documents\workspace-spring-tool-suite-4-4.5.1.RELEASE\cliente)
+2024-10-31T11:08:10.172-05:00 DEBUG 18704 --- [cliente] [restartedMain] com.prueba.cliente.ClienteApplication    : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-31T11:08:10.174-05:00  INFO 18704 --- [cliente] [restartedMain] com.prueba.cliente.ClienteApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-10-31T11:08:10.271-05:00  INFO 18704 --- [cliente] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-31T11:08:10.273-05:00  INFO 18704 --- [cliente] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-31T11:08:11.576-05:00  INFO 18704 --- [cliente] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-31T11:08:11.709-05:00  INFO 18704 --- [cliente] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 2 JPA repository interfaces.
+2024-10-31T11:08:12.740-05:00  INFO 18704 --- [cliente] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-10-31T11:08:12.762-05:00  INFO 18704 --- [cliente] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-31T11:08:12.762-05:00  INFO 18704 --- [cliente] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-31T11:08:12.848-05:00  INFO 18704 --- [cliente] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-31T11:08:12.849-05:00  INFO 18704 --- [cliente] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2575 ms
+2024-10-31T11:08:13.106-05:00  INFO 18704 --- [cliente] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-31T11:08:13.394-05:00  INFO 18704 --- [cliente] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@291f165c
+2024-10-31T11:08:13.398-05:00  INFO 18704 --- [cliente] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-31T11:08:13.476-05:00  INFO 18704 --- [cliente] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-31T11:08:13.610-05:00  INFO 18704 --- [cliente] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-31T11:08:13.698-05:00  INFO 18704 --- [cliente] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-31T11:08:14.384-05:00  INFO 18704 --- [cliente] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-31T11:08:16.164-05:00  INFO 18704 --- [cliente] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-31T11:08:16.172-05:00  INFO 18704 --- [cliente] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-31T11:08:16.750-05:00  WARN 18704 --- [cliente] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-31T11:08:17.728-05:00  INFO 18704 --- [cliente] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-31T11:08:17.832-05:00 DEBUG 18704 --- [cliente] [restartedMain] .a.r.l.a.MessagingMessageListenerAdapter : Inferred argument type for public void com.prueba.cliente.service.impl.MovimientoEventListener.recibirMovimientoRegistradoEvento(org.springframework.messaging.Message) is class com.prueba.cliente.config.MovimientoRegistradoEvent
+2024-10-31T11:08:17.852-05:00 DEBUG 18704 --- [cliente] [restartedMain] o.s.a.r.l.SimpleMessageListenerContainer : No global properties bean
+2024-10-31T11:08:17.905-05:00  INFO 18704 --- [cliente] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-10-31T11:08:17.907-05:00 DEBUG 18704 --- [cliente] [restartedMain] o.s.a.r.l.SimpleMessageListenerContainer : Starting Rabbit listener container.
+2024-10-31T11:08:17.912-05:00  INFO 18704 --- [cliente] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-10-31T11:08:18.028-05:00  INFO 18704 --- [cliente] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#56e97c15:0/SimpleConnection@7d31fdfd [delegate=amqp://guest@127.0.0.1:5672/, localPort=55364]
+2024-10-31T11:08:18.034-05:00 DEBUG 18704 --- [cliente] [restartedMain] o.s.amqp.rabbit.core.RabbitAdmin         : Initializing declarations
+2024-10-31T11:08:18.037-05:00 DEBUG 18704 --- [cliente] [restartedMain] o.s.amqp.rabbit.core.RabbitAdmin         : Nothing to declare
+2024-10-31T11:08:18.053-05:00 DEBUG 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Starting consumer Consumer@c676db2: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-10-31T11:08:18.072-05:00 DEBUG 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-10-31T11:08:18.098-05:00 DEBUG 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Detected closed channel on exception.  Re-initializing: AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-10-31T11:08:18.099-05:00 DEBUG 18704 --- [cliente] [AMQP Connection 127.0.0.1:5672] o.s.a.r.c.CachingConnectionFactory       : Shutdown Signal: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'movimientoQueue' in vhost '/', class-id=50, method-id=10)
+2024-10-31T11:08:18.102-05:00  WARN 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Failed to declare queue: movimientoQueue
+2024-10-31T11:08:18.103-05:00  WARN 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Queue declaration failed; retries left=3
+
+org.springframework.amqp.rabbit.listener.BlockingQueueConsumer$DeclarationException: Failed to declare queue(s):[movimientoQueue]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:773) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.passiveDeclarations(BlockingQueueConsumer.java:650) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:637) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1480) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1320) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.io.IOException: null
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:140) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:136) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:158) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:1033) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:47) ~[amqp-client-5.21.0.jar:5.21.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1203) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at jdk.proxy2/jdk.proxy2.$Proxy140.queueDeclarePassive(Unknown Source) ~[na:na]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:751) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	... 5 common frames omitted
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'movimientoQueue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:552) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:316) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:152) ~[amqp-client-5.21.0.jar:5.21.0]
+	... 14 common frames omitted
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'movimientoQueue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:528) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:349) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:193) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:125) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:761) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQConnection.access$400(AMQConnection.java:48) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:688) ~[amqp-client-5.21.0.jar:5.21.0]
+	... 1 common frames omitted
+
+2024-10-31T11:08:23.121-05:00 DEBUG 18704 --- [cliente] [AMQP Connection 127.0.0.1:5672] o.s.a.r.c.CachingConnectionFactory       : Shutdown Signal: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'movimientoQueue' in vhost '/', class-id=50, method-id=10)
+2024-10-31T11:08:23.122-05:00 DEBUG 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Detected closed channel on exception.  Re-initializing: AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-10-31T11:08:23.125-05:00  WARN 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Failed to declare queue: movimientoQueue
+2024-10-31T11:08:23.126-05:00  WARN 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Queue declaration failed; retries left=2
+
+org.springframework.amqp.rabbit.listener.BlockingQueueConsumer$DeclarationException: Failed to declare queue(s):[movimientoQueue]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:773) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.passiveDeclarations(BlockingQueueConsumer.java:650) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:637) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1480) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1320) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.io.IOException: null
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:140) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:136) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:158) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:1033) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:47) ~[amqp-client-5.21.0.jar:5.21.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1203) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at jdk.proxy2/jdk.proxy2.$Proxy140.queueDeclarePassive(Unknown Source) ~[na:na]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:751) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	... 5 common frames omitted
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'movimientoQueue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:552) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:316) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:152) ~[amqp-client-5.21.0.jar:5.21.0]
+	... 14 common frames omitted
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'movimientoQueue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:528) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:349) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:193) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:125) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:761) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQConnection.access$400(AMQConnection.java:48) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:688) ~[amqp-client-5.21.0.jar:5.21.0]
+	... 1 common frames omitted
+
+2024-10-31T11:08:26.777-05:00  INFO 18704 --- [cliente] [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-10-31T11:08:28.135-05:00 DEBUG 18704 --- [cliente] [AMQP Connection 127.0.0.1:5672] o.s.a.r.c.CachingConnectionFactory       : Shutdown Signal: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'movimientoQueue' in vhost '/', class-id=50, method-id=10)
+2024-10-31T11:08:28.135-05:00 DEBUG 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Detected closed channel on exception.  Re-initializing: AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-10-31T11:08:28.140-05:00  WARN 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Failed to declare queue: movimientoQueue
+2024-10-31T11:08:28.140-05:00  WARN 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Queue declaration failed; retries left=1
+
+org.springframework.amqp.rabbit.listener.BlockingQueueConsumer$DeclarationException: Failed to declare queue(s):[movimientoQueue]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:773) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.passiveDeclarations(BlockingQueueConsumer.java:650) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:637) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1480) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1320) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.io.IOException: null
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:140) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:136) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:158) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:1033) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:47) ~[amqp-client-5.21.0.jar:5.21.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1203) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at jdk.proxy2/jdk.proxy2.$Proxy140.queueDeclarePassive(Unknown Source) ~[na:na]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:751) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	... 5 common frames omitted
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'movimientoQueue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:552) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:316) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:152) ~[amqp-client-5.21.0.jar:5.21.0]
+	... 14 common frames omitted
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'movimientoQueue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:528) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:349) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:193) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:125) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:761) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQConnection.access$400(AMQConnection.java:48) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:688) ~[amqp-client-5.21.0.jar:5.21.0]
+	... 1 common frames omitted
+
+2024-10-31T11:08:33.148-05:00 DEBUG 18704 --- [cliente] [AMQP Connection 127.0.0.1:5672] o.s.a.r.c.CachingConnectionFactory       : Shutdown Signal: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'movimientoQueue' in vhost '/', class-id=50, method-id=10)
+2024-10-31T11:08:33.148-05:00 DEBUG 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Detected closed channel on exception.  Re-initializing: AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-10-31T11:08:33.151-05:00  WARN 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Failed to declare queue: movimientoQueue
+2024-10-31T11:08:33.153-05:00 ERROR 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Consumer threw missing queues exception, fatal=true
+
+org.springframework.amqp.rabbit.listener.QueuesNotAvailableException: Cannot prepare queue for listener. Either the queue doesn't exist or the broker will not allow us to use it.
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.handleDeclarationException(BlockingQueueConsumer.java:723) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.passiveDeclarations(BlockingQueueConsumer.java:657) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:637) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1480) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1320) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: org.springframework.amqp.rabbit.listener.BlockingQueueConsumer$DeclarationException: Failed to declare queue(s):[movimientoQueue]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:773) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.passiveDeclarations(BlockingQueueConsumer.java:650) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	... 4 common frames omitted
+Caused by: java.io.IOException: null
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:140) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:136) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:158) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:1033) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:47) ~[amqp-client-5.21.0.jar:5.21.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1203) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at jdk.proxy2/jdk.proxy2.$Proxy140.queueDeclarePassive(Unknown Source) ~[na:na]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:751) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	... 5 common frames omitted
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'movimientoQueue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:552) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:316) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:152) ~[amqp-client-5.21.0.jar:5.21.0]
+	... 14 common frames omitted
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'movimientoQueue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:528) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:349) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:193) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:125) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:761) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQConnection.access$400(AMQConnection.java:48) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:688) ~[amqp-client-5.21.0.jar:5.21.0]
+	... 1 common frames omitted
+
+2024-10-31T11:08:33.158-05:00 DEBUG 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Cancelling Consumer@c676db2: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@5abae2c8 Shared Rabbit Connection: SimpleConnection@7d31fdfd [delegate=amqp://guest@127.0.0.1:5672/, localPort=55364], acknowledgeMode=AUTO local queue size=0
+2024-10-31T11:08:33.158-05:00 DEBUG 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Closing Rabbit Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@5abae2c8 Shared Rabbit Connection: SimpleConnection@7d31fdfd [delegate=amqp://guest@127.0.0.1:5672/, localPort=55364]
+2024-10-31T11:08:33.158-05:00 DEBUG 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Closing cached Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-10-31T11:08:33.162-05:00 ERROR 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Stopping container from aborted consumer
+2024-10-31T11:08:33.162-05:00 DEBUG 18704 --- [cliente] [restartedMain] o.s.a.r.l.SimpleMessageListenerContainer : Shutting down Rabbit listener container
+2024-10-31T11:08:33.163-05:00  INFO 18704 --- [cliente] [restartedMain] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is stopping due to an aborted consumer
+2024-10-31T11:08:33.163-05:00 DEBUG 18704 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2024-10-31T11:08:34.003-05:00  WARN 18704 --- [cliente] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'org.springframework.amqp.rabbit.config.internalRabbitListenerEndpointRegistry'
+2024-10-31T11:08:34.005-05:00 DEBUG 18704 --- [cliente] [restartedMain] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2024-10-31T11:08:34.009-05:00  INFO 18704 --- [cliente] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-31T11:08:34.016-05:00  INFO 18704 --- [cliente] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-31T11:08:34.032-05:00  INFO 18704 --- [cliente] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-31T11:08:34.068-05:00  INFO 18704 --- [cliente] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-31T11:08:34.134-05:00 ERROR 18704 --- [cliente] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Failed to start bean 'org.springframework.amqp.rabbit.config.internalRabbitListenerEndpointRegistry'
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:288) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:472) ~[spring-context-6.1.13.jar:6.1.13]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:257) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:202) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:990) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at com.prueba.cliente.ClienteApplication.main(ClienteApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.4.jar:3.3.4]
+Caused by: org.springframework.amqp.AmqpIllegalStateException: Fatal exception on listener startup
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.waitForConsumersToStart(SimpleMessageListenerContainer.java:641) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doStart(SimpleMessageListenerContainer.java:601) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.start(AbstractMessageListenerContainer.java:1405) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.RabbitListenerEndpointRegistry.startIfNecessary(RabbitListenerEndpointRegistry.java:297) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.RabbitListenerEndpointRegistry.start(RabbitListenerEndpointRegistry.java:247) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:285) ~[spring-context-6.1.13.jar:6.1.13]
+	... 18 common frames omitted
+Caused by: org.springframework.amqp.rabbit.listener.QueuesNotAvailableException: Cannot prepare queue for listener. Either the queue doesn't exist or the broker will not allow us to use it.
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.handleDeclarationException(BlockingQueueConsumer.java:723) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.passiveDeclarations(BlockingQueueConsumer.java:657) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:637) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1480) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1320) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: org.springframework.amqp.rabbit.listener.BlockingQueueConsumer$DeclarationException: Failed to declare queue(s):[movimientoQueue]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:773) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.passiveDeclarations(BlockingQueueConsumer.java:650) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	... 4 common frames omitted
+Caused by: java.io.IOException: null
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:140) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:136) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:158) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:1033) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:47) ~[amqp-client-5.21.0.jar:5.21.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1203) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at jdk.proxy2/jdk.proxy2.$Proxy140.queueDeclarePassive(Unknown Source) ~[na:na]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:751) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	... 5 common frames omitted
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'movimientoQueue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:552) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:316) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:152) ~[amqp-client-5.21.0.jar:5.21.0]
+	... 14 common frames omitted
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'movimientoQueue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:528) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:349) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:193) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:125) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:761) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQConnection.access$400(AMQConnection.java:48) ~[amqp-client-5.21.0.jar:5.21.0]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:688) ~[amqp-client-5.21.0.jar:5.21.0]
+	... 1 common frames omitted
+
+2024-10-31T11:12:16.043-05:00  INFO 14920 --- [cliente] [restartedMain] com.prueba.cliente.ClienteApplication    : Starting ClienteApplication using Java 17.0.10 with PID 14920 (C:\Users\Steven Romero\Documents\workspace-spring-tool-suite-4-4.5.1.RELEASE\cliente\target\classes started by Steven Romero in C:\Users\Steven Romero\Documents\workspace-spring-tool-suite-4-4.5.1.RELEASE\cliente)
+2024-10-31T11:12:16.047-05:00 DEBUG 14920 --- [cliente] [restartedMain] com.prueba.cliente.ClienteApplication    : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-31T11:12:16.048-05:00  INFO 14920 --- [cliente] [restartedMain] com.prueba.cliente.ClienteApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-10-31T11:12:16.136-05:00  INFO 14920 --- [cliente] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-31T11:12:16.137-05:00  INFO 14920 --- [cliente] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-31T11:12:17.400-05:00  INFO 14920 --- [cliente] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-31T11:12:17.512-05:00  INFO 14920 --- [cliente] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 2 JPA repository interfaces.
+2024-10-31T11:12:18.522-05:00  INFO 14920 --- [cliente] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-10-31T11:12:18.545-05:00  INFO 14920 --- [cliente] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-31T11:12:18.545-05:00  INFO 14920 --- [cliente] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-31T11:12:18.640-05:00  INFO 14920 --- [cliente] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-31T11:12:18.641-05:00  INFO 14920 --- [cliente] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2503 ms
+2024-10-31T11:12:18.901-05:00  INFO 14920 --- [cliente] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-31T11:12:19.264-05:00  INFO 14920 --- [cliente] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@645da2e0
+2024-10-31T11:12:19.267-05:00  INFO 14920 --- [cliente] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-31T11:12:19.332-05:00  INFO 14920 --- [cliente] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-31T11:12:19.435-05:00  INFO 14920 --- [cliente] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-31T11:12:19.495-05:00  INFO 14920 --- [cliente] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-31T11:12:20.113-05:00  INFO 14920 --- [cliente] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-31T11:12:21.919-05:00  INFO 14920 --- [cliente] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-31T11:12:21.928-05:00  INFO 14920 --- [cliente] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-31T11:12:22.479-05:00  WARN 14920 --- [cliente] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-31T11:12:23.492-05:00  INFO 14920 --- [cliente] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-31T11:12:23.594-05:00 DEBUG 14920 --- [cliente] [restartedMain] .a.r.l.a.MessagingMessageListenerAdapter : Inferred argument type for public void com.prueba.cliente.service.impl.MovimientoEventListener.recibirMovimientoRegistradoEvento(org.springframework.messaging.Message) is class com.prueba.cliente.config.MovimientoRegistradoEvent
+2024-10-31T11:12:23.614-05:00 DEBUG 14920 --- [cliente] [restartedMain] o.s.a.r.l.SimpleMessageListenerContainer : No global properties bean
+2024-10-31T11:12:23.654-05:00  INFO 14920 --- [cliente] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-10-31T11:12:23.656-05:00 DEBUG 14920 --- [cliente] [restartedMain] o.s.a.r.l.SimpleMessageListenerContainer : Starting Rabbit listener container.
+2024-10-31T11:12:23.661-05:00  INFO 14920 --- [cliente] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-10-31T11:12:23.780-05:00  INFO 14920 --- [cliente] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#5f6b763a:0/SimpleConnection@294df8d1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55401]
+2024-10-31T11:12:23.788-05:00 DEBUG 14920 --- [cliente] [restartedMain] o.s.amqp.rabbit.core.RabbitAdmin         : Initializing declarations
+2024-10-31T11:12:23.808-05:00 DEBUG 14920 --- [cliente] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-10-31T11:12:23.822-05:00 DEBUG 14920 --- [cliente] [restartedMain] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda$1602/0x0000022bd793a920 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@7af8b611 Shared Rabbit Connection: SimpleConnection@294df8d1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55401]
+2024-10-31T11:12:23.823-05:00 DEBUG 14920 --- [cliente] [restartedMain] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'movimientoQueue'
+2024-10-31T11:12:23.865-05:00 DEBUG 14920 --- [cliente] [restartedMain] o.s.amqp.rabbit.core.RabbitAdmin         : Declarations finished
+2024-10-31T11:12:23.878-05:00 DEBUG 14920 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda$1610/0x0000022bd7940b10 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@7af8b611 Shared Rabbit Connection: SimpleConnection@294df8d1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55401]
+2024-10-31T11:12:23.888-05:00 DEBUG 14920 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Starting consumer Consumer@1116ce65: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2024-10-31T11:12:23.907-05:00 DEBUG 14920 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Started on queue 'movimientoQueue' with tag amq.ctag-bMs_s6FcWPw4_CFVutyXcA: Consumer@1116ce65: tags=[[amq.ctag-bMs_s6FcWPw4_CFVutyXcA]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@7af8b611 Shared Rabbit Connection: SimpleConnection@294df8d1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55401], acknowledgeMode=AUTO local queue size=0
+2024-10-31T11:12:23.907-05:00 DEBUG 14920 --- [cliente] [pool-2-thread-3] o.s.a.r.listener.BlockingQueueConsumer   : ConsumeOK: Consumer@1116ce65: tags=[[amq.ctag-bMs_s6FcWPw4_CFVutyXcA]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@7af8b611 Shared Rabbit Connection: SimpleConnection@294df8d1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55401], acknowledgeMode=AUTO local queue size=0
+2024-10-31T11:12:23.923-05:00  INFO 14920 --- [cliente] [restartedMain] com.prueba.cliente.ClienteApplication    : Started ClienteApplication in 8.561 seconds (process running for 9.726)
+2024-10-31T11:12:56.868-05:00 DEBUG 14920 --- [cliente] [pool-2-thread-4] o.s.a.r.listener.BlockingQueueConsumer   : Storing delivery for consumerTag: 'amq.ctag-bMs_s6FcWPw4_CFVutyXcA' with deliveryTag: '1' in Consumer@1116ce65: tags=[[amq.ctag-bMs_s6FcWPw4_CFVutyXcA]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@7af8b611 Shared Rabbit Connection: SimpleConnection@294df8d1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55401], acknowledgeMode=AUTO local queue size=0
+2024-10-31T11:12:56.890-05:00 DEBUG 14920 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Received message: (Body:'[B@752e84e9(byte[133])' MessageProperties [headers={__TypeId__=com.prueba.cuenta.movimientos.config.MovimientoRegistradoEvent}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=movimientoExchange, receivedRoutingKey=movimiento.creado, deliveryTag=1, consumerTag=amq.ctag-bMs_s6FcWPw4_CFVutyXcA, consumerQueue=movimientoQueue])
+2024-10-31T11:12:57.070-05:00 DEBUG 14920 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] .a.r.l.a.MessagingMessageListenerAdapter : Processing [GenericMessage [payload=MovimientoRegistradoEvent [numeroCuenta=123456966, tipoMovimiento=Pago luz, valor=2000.0, saldoFinal=507695.0, fecha=2024-10-31T11:12:56.440120200], headers={amqp_receivedDeliveryMode=PERSISTENT, amqp_receivedExchange=movimientoExchange, amqp_deliveryTag=1, amqp_consumerQueue=movimientoQueue, amqp_redelivered=false, amqp_receivedRoutingKey=movimiento.creado, amqp_contentEncoding=UTF-8, id=b0fdb43b-6131-94aa-7cff-60fe37388dd3, amqp_consumerTag=amq.ctag-bMs_s6FcWPw4_CFVutyXcA, amqp_lastInBatch=false, contentType=application/json, __TypeId__=com.prueba.cuenta.movimientos.config.MovimientoRegistradoEvent, timestamp=1730391177068}]]
+2024-10-31T11:12:57.072-05:00  INFO 14920 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.p.c.s.impl.MovimientoEventListener     : Movimiento recibido en el microservicio Cliente: MovimientoRegistradoEvent [numeroCuenta=123456966, tipoMovimiento=Pago luz, valor=2000.0, saldoFinal=507695.0, fecha=2024-10-31T11:12:56.440120200]
+2024-10-31T11:24:46.683-05:00  INFO 14920 --- [cliente] [RMI TCP Connection(21)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-10-31T11:24:46.688-05:00 DEBUG 14920 --- [cliente] [RMI TCP Connection(21)-127.0.0.1] o.s.a.r.l.SimpleMessageListenerContainer : Shutting down Rabbit listener container
+2024-10-31T11:24:46.693-05:00  INFO 14920 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2024-10-31T11:24:46.696-05:00 DEBUG 14920 --- [cliente] [pool-2-thread-5] o.s.a.r.listener.BlockingQueueConsumer   : Received cancelOk for tag amq.ctag-bMs_s6FcWPw4_CFVutyXcA (movimientoQueue); Consumer@1116ce65: tags=[[amq.ctag-bMs_s6FcWPw4_CFVutyXcA]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@7af8b611 Shared Rabbit Connection: SimpleConnection@294df8d1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55401], acknowledgeMode=AUTO local queue size=0
+2024-10-31T11:24:46.779-05:00  INFO 14920 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2024-10-31T11:24:46.779-05:00 DEBUG 14920 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Cancelling Consumer@1116ce65: tags=[[amq.ctag-bMs_s6FcWPw4_CFVutyXcA]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@7af8b611 Shared Rabbit Connection: SimpleConnection@294df8d1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55401], acknowledgeMode=AUTO local queue size=0
+2024-10-31T11:24:46.780-05:00 DEBUG 14920 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Closing Rabbit Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@7af8b611 Shared Rabbit Connection: SimpleConnection@294df8d1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55401]
+2024-10-31T11:24:46.780-05:00 DEBUG 14920 --- [cliente] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Closing cached Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2024-10-31T11:24:47.516-05:00 DEBUG 14920 --- [cliente] [RMI TCP Connection(21)-127.0.0.1] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is not active already
+2024-10-31T11:24:47.521-05:00  INFO 14920 --- [cliente] [RMI TCP Connection(21)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-31T11:24:47.528-05:00  INFO 14920 --- [cliente] [RMI TCP Connection(21)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-31T11:24:47.541-05:00  INFO 14920 --- [cliente] [RMI TCP Connection(21)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

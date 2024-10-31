@@ -12,7 +12,9 @@ Este microservicio gestiona las entidades **Cliente** y **Persona** dentro de la
 ## Configuración
 
 ### Base de Datos
-
+```markdown
+Se adjunta script para base de datos en (src/main/resources)
+```
 El microservicio utiliza PostgreSQL como base de datos. Asegúrate de configurar las credenciales en el archivo `application.properties` o `application.yml`:
 
 ```properties
@@ -37,8 +39,8 @@ Este microservicio recibe eventos en RabbitMQ cada vez que se reglistra un movim
 ### Cliente API - Se adjunta coleccion postman (src/main/resources)
 ```properties
 POST /cliente/save-client: Crear un nuevo cliente.
-GET /clientes/get-clients: Obtener todos loa clientes.
-PUT /clientes//update-client/{clientId}: Actualizar un cliente por ID.
+GET /clientes/get-clients: Obtener todos los clientes.
+PUT /clientes/update-client/{clientId}: Actualizar un cliente por ID.
 DELETE /clientes/delete-client/{clientId}: Eliminar un cliente por ID.
 ```
 

@@ -38,7 +38,7 @@ Este microservicio recibe eventos en RabbitMQ cada vez que se reglistra un movim
 ```properties
 POST /cliente/save-client: Crear un nuevo cliente.
 GET /clientes/get-clients: Obtener todos loa clientes.
-PUT /clientes//update-client/{clientId}: Actualizar un cliente por ID.
+PUT /clientes/update-client/{clientId}: Actualizar un cliente por ID.
 DELETE /clientes/delete-client/{clientId}: Eliminar un cliente por ID.
 ```
 
